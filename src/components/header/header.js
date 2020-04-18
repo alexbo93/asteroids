@@ -5,7 +5,8 @@ import {
   HeaderContainer,
   HeaderLogoContainer,
   HeaderNav,
-  HeaderNavItem
+  HeaderNavItem,
+  HeaderLink
 } from "./header.styled"
 
 const Header = () => (
@@ -16,13 +17,13 @@ const Header = () => (
     </HeaderLogoContainer>
     <HeaderNav>
         <HeaderNavItem>
-          <Link to="/">Home</Link>
+          <HeaderLink to="/">Home</HeaderLink>
         </HeaderNavItem>
         <HeaderNavItem>
-          <Link to="/list">List'Em</Link>
+          <HeaderLink to="/asteroids">List'Em</HeaderLink>
         </HeaderNavItem>
         <HeaderNavItem>
-          <Link to="/pod">Picture</Link>
+          <HeaderLink to="/pod">Picture</HeaderLink>
         </HeaderNavItem>
     </HeaderNav>
   </HeaderContainer>

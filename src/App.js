@@ -1,11 +1,19 @@
 import React from 'react';
-
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
+
+import Pod from './pages/picture-of-day';
+import Home from './pages/home';
+import Asteroids from './pages/asteroids';
+import Asteroid from './pages/asteroid';
+import NotFound from './pages/not-found';
+
 import Header from './components/header';
+import Footer from './components/footer';
 
 
 function App() {
@@ -14,20 +22,24 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route path="/list">
-            <h1>LIST</h1>
+          <Route path="/asteroids">
+            <Asteroids />
           </Route>
           <Route path="/asteroid/:id">
-            <h1>DETAIL</h1>
+            <Asteroid />
           </Route>
           <Route path="/pod">
-            <h1>PICTURE</h1>
+            <Pod />
           </Route>
-          <Route path="/">
-            <h1>HOME</h1>
+          <Route path="/" exact>
+            <Home />
           </Route>
+          <Route path="/not-found">
+            <NotFound />
+          </Route>
+          <Redirect to="/not-found" />
         </Switch>
-        {/*<Footer />*/}
+        <Footer />
         </div>
     </Router>
   );
