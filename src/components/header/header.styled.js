@@ -42,4 +42,8 @@ export const HeaderNavItem = styled.li`
 `;
 export const HeaderLink = styled(Link)`
   text-decoration: none;
+
+  &:hover {
+    font-weight: bold;
+  }
 `;
