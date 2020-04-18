@@ -1,10 +1,13 @@
-import { all, call, takeLatest, fork } from 'redux-saga/effects';
-import { GET_ASTEROIDS } from './asteroids-actions';
+import { all, call, put, takeLatest, fork } from 'redux-saga/effects';
+import { GET_ASTEROIDS, setAsteroidsSuccess } from './asteroids-actions';
 import moment from 'moment';
 
 import { callApi } from '../../utils/api-utils';
 import Asteroids from '../../models/asteroids-builder';
 import Asteroid from '../../models/asteroid-builder';
+
+console.log('GO WITH .ENV VARIABLES');
+console.log('PREPARE PROD ENVIRONMENT VARS');
 
 const apiURL = 'https://api.nasa.gov';
 const startDate = moment().format('YYYY-MM-DD');
@@ -26,8 +29,7 @@ function* getAsteroidsSaga() {
     const data = yield call(callApi, apiString);
 
     const asteroids = Asteroids.build(data, Asteroid);
-
-    console.log('data: ', asteroids);
+    yield put(setAsteroidsSuccess(asteroids));
   } catch (error) {
     console.error(error);
   }

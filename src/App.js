@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
-} from "react-router-dom";
+  Redirect,
+} from 'react-router-dom';
 
 import Pod from './pages/picture-of-day';
 import Home from './pages/home';
@@ -15,10 +15,17 @@ import NotFound from './pages/not-found';
 import Header from './components/header';
 import Footer from './components/footer';
 
-import "./App.css";
-
+import './App.css';
+import { getAsteroids } from './features/asteroids';
+import { useDispatch } from 'react-redux';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAsteroids());
+  });
+
   return (
     <Router>
       <div className="App">
@@ -42,7 +49,7 @@ function App() {
           <Redirect to="/not-found" />
         </Switch>
         <Footer />
-        </div>
+      </div>
     </Router>
   );
 }

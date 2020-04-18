@@ -1,10 +1,10 @@
-import { SET_ASTEROIDS_SUCCESS } from "./asteroids-actions";
+import { SET_ASTEROIDS_SUCCESS } from './asteroids-actions';
 
 const initialState = [];
 const asteroidsReducer = (state = initialState, action) => {
-  switch (action.key) {
+  switch (action.type) {
     case SET_ASTEROIDS_SUCCESS:
-      return action.payload;
+      return action.payload.items;
     default:
       return state;
   }
