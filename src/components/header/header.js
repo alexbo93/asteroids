@@ -1,21 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import {
   HeaderContainer,
   HeaderLogoContainer,
   HeaderNav,
   HeaderNavItem,
-  HeaderLink
+  HeaderLink,
+  HeaderNavContainer
 } from "./header.styled"
 
 const Header = () => (
   <HeaderContainer>
     <HeaderLogoContainer>
-      <img src="./assets/asteroids_200x200.png" alt="Logo" height="40" width="40"></img>
-      <span>Asteroids</span>
+      <img src="./assets/asteroids_200x200.png" alt="Logo" height="50" width="50"></img>
+      <span>ASTEROIDS</span>
     </HeaderLogoContainer>
-    <HeaderNav>
+    <HeaderNavContainer>
+      <HeaderNav>
         <HeaderNavItem>
           <HeaderLink to="/">Home</HeaderLink>
         </HeaderNavItem>
@@ -25,7 +26,8 @@ const Header = () => (
         <HeaderNavItem>
           <HeaderLink to="/pod">Picture</HeaderLink>
         </HeaderNavItem>
-    </HeaderNav>
+      </HeaderNav>
+    </HeaderNavContainer>
   </HeaderContainer>
 );
 export default Header;
