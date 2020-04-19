@@ -32,6 +32,7 @@ const Filters = ({ onFilterChange }) => {
             <option value={LUNAR_DISTANCE * 10}>
               {'<= 10 Lunar Distance'}
             </option>
+            <option value={Number.MAX_VALUE}>{'> 10 Lunar distance'}</option>
           </CustomSelect>
         </FilterItemLeft>
         <FilterItemRight>
