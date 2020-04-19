@@ -4,7 +4,7 @@ import AsteroidListItem from './list-item';
 import AsteroidListLabels from './list-labels';
 import { AsteroidsListContainer } from './asteroids-list.styled';
 
-const AsteroidsList = ({ asteroids }) => {
+const AsteroidsList = ({ asteroids, onLabelSelected }) => {
   const getList = () =>
     asteroids &&
     asteroids.map((asteroid) => (
@@ -13,7 +13,7 @@ const AsteroidsList = ({ asteroids }) => {
 
   return (
     <AsteroidsListContainer>
-      <AsteroidListLabels />
+      <AsteroidListLabels onLabelSelected={onLabelSelected} />
       {asteroids && asteroids.length ? getList() : 'There are no asteroids'}
     </AsteroidsListContainer>
   );

@@ -8,7 +8,12 @@ import useAsteroids from './list/asteroids-hooks';
 import Filters from './filters';
 
 const Asteroids = () => {
-  const { asteroids, onFilterChange, getFilteredAsteroids } = useAsteroids();
+  const {
+    asteroids,
+    onFilterChange,
+    getAsteroidsWithFiltersAndOrder,
+    onOrderSet,
+  } = useAsteroids();
 
   return (
     <MainContainer>
@@ -16,7 +21,11 @@ const Asteroids = () => {
       <AsteroidsFilterContainer>
         <Filters onFilterChange={onFilterChange} />
       </AsteroidsFilterContainer>
-      <AsteroidsList asteroids={getFilteredAsteroids(asteroids)} />
+      <AsteroidsList
+        asteroids={getAsteroidsWithFiltersAndOrder(asteroids)}
+        onLabelSelected={onOrderSet}
+      />
+      <p>* Click on each attribute name label to display ordered results</p>
     </MainContainer>
   );
 };

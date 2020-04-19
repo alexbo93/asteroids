@@ -12,6 +12,11 @@ const useAsteroids = () => {
     is_hazardous: false,
   });
 
+  const [order, setOrder] = useState({
+    param: 'name',
+    desc: true,
+  });
+
   const onFilterChange = (filter, value) => {
     const newFilters = { ...filters, [filter]: value };
     setFilters(newFilters);
@@ -37,10 +42,35 @@ const useAsteroids = () => {
     return newList;
   };
 
+  const orderList = (list) => {
+    let ordered = deepCopy(list);
+    const descOrderFn = (a, b) =>
+      parseFloat(a[order.param]) > parseFloat(b[order.param]) ? -1 : 1;
+    const ascOrderFn = (a, b) =>
+      parseFloat(a[order.param]) > parseFloat(b[order.param]) ? 1 : -1;
+
+    const sortFn = order.desc ? descOrderFn : ascOrderFn;
+    return ordered.sort(sortFn);
+  };
+
+  const getAsteroidsWithFiltersAndOrder = (asteroids) => {
+    let list = getFilteredAsteroids(asteroids);
+    list = orderList(list);
+
+    return list;
+  };
+
+  const onOrderSet = (name) =>
+    setOrder({
+      param: name,
+      desc: name === order.param ? !order.desc : true,
+    });
+
   return {
     asteroids,
     onFilterChange,
-    getFilteredAsteroids,
+    getAsteroidsWithFiltersAndOrder,
+    onOrderSet,
   };
 };
 
