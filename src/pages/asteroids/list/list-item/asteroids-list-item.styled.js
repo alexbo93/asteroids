@@ -14,7 +14,7 @@ export const AsteroidDetailIconContainer = styled.div`
   float: right;
 
   a {
-    color: inherit;
+    color: #1a918b;
   }
 
   i {
@@ -34,6 +34,7 @@ export const AsteroidIconContainer = styled.div`
 
   i {
     margin-right: 10px;
+    color: #1a918b;
   }
 
   i,

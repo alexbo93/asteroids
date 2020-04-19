@@ -23,7 +23,13 @@ const AsteroidsListItem = ({ asteroid }) => (
       <span>{getRounded(asteroid.velocity)}</span>
     </AsteroidVariableInfoContainer>
     <AsteroidVariableInfoContainer>
-      <span>{asteroid.is_hazardous}</span>
+      <span>
+        {asteroid.is_hazardous ? (
+          <i class="fas fa-exclamation-triangle"></i>
+        ) : (
+          '-'
+        )}
+      </span>
     </AsteroidVariableInfoContainer>
     <AsteroidDetailIconContainer>
       <Link to={`/asteroid/${asteroid.id}`}>

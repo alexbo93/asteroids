@@ -9,8 +9,8 @@ import {
 const AsteroidsListLabels = () => (
   <AsteroidsListLabelsContainer>
     <AsteroidName>Name</AsteroidName>
-    <AsteroidVariableLabel>Distance</AsteroidVariableLabel>
-    <AsteroidVariableLabel>Velocity</AsteroidVariableLabel>
+    <AsteroidVariableLabel>Distance (km)</AsteroidVariableLabel>
+    <AsteroidVariableLabel>Velocity (km/s)</AsteroidVariableLabel>
     <AsteroidVariableLabel>Hazardous?</AsteroidVariableLabel>
   </AsteroidsListLabelsContainer>
 );

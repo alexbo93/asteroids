@@ -13,7 +13,7 @@ const Header = () => (
   <HeaderContainer>
     <HeaderLogoContainer>
       <img
-        src="assets/asteroids_200x200.png"
+        src="/assets/asteroids_200x200.png"
         alt="Logo"
         height="50"
         width="50"
