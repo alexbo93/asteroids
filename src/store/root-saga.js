@@ -1,9 +1,8 @@
-import { all } from "redux-saga/effects";
+import { all } from 'redux-saga/effects';
 
-import { asteroidsSagas } from "../features/asteroids";
+import { asteroidsSagas } from '../features/asteroids';
+import { podSagas } from '../features/pod';
 
 export default function* rootSagas() {
-  yield all([
-    ...asteroidsSagas
-  ]);
+  yield all([...asteroidsSagas, ...podSagas]);
 }

@@ -8,12 +8,12 @@ import {
 
 const AsteroidsListLabels = ({ onLabelSelected }) => (
   <AsteroidsListLabelsContainer>
-    <AsteroidName onClick={() => onLabelSelected('name')}>Name</AsteroidName>
+    <AsteroidName onClick={() => onLabelSelected('name')}>Name*</AsteroidName>
     <AsteroidVariableLabel onClick={() => onLabelSelected('miss_distance')}>
-      Distance (km)
+      Distance (km)*
     </AsteroidVariableLabel>
     <AsteroidVariableLabel onClick={() => onLabelSelected('velocity')}>
-      Velocity (km/s)
+      Velocity (km/s)*
     </AsteroidVariableLabel>
     <AsteroidVariableLabel>Hazardous?</AsteroidVariableLabel>
   </AsteroidsListLabelsContainer>
