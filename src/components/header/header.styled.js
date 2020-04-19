@@ -40,11 +40,6 @@ export const HeaderNavItem = styled.li`
   display: inline-block;
   margin-right: 25px;
   line-height: 60px;
-`;
-export const HeaderLink = styled(Link)`
-  text-decoration: none;
 
-  &:hover {
-    font-weight: bold;
-  }
+  color: #106964;
 `;

@@ -5,37 +5,39 @@ import {
   HeaderLogoContainer,
   HeaderNav,
   HeaderNavItem,
-  HeaderLink,
   HeaderNavContainer,
 } from './header.styled';
+import { NavLink } from '../nav-link';
 
 const Header = () => (
   <HeaderContainer>
     <HeaderLogoContainer>
       <img
-        src="./assets/asteroids_200x200.png"
+        src="assets/asteroids_200x200.png"
         alt="Logo"
         height="50"
         width="50"
       ></img>
-      <span>ASTEROIDS</span>
     </HeaderLogoContainer>
     <HeaderNavContainer>
       <HeaderNav>
         <HeaderNavItem>
-          <HeaderLink to="/">
-            Home<i className="fas fa-home"></i>
-          </HeaderLink>
+          <NavLink to="/">
+            <span>Home</span>
+            <i className="fas fa-home"></i>
+          </NavLink>
         </HeaderNavItem>
         <HeaderNavItem>
-          <HeaderLink to="/asteroids">
-            List'Em<i className="fas fa-list-ul"></i>
-          </HeaderLink>
+          <NavLink to="/asteroids">
+            <span>List'Em</span>
+            <i className="fas fa-list-ul"></i>
+          </NavLink>
         </HeaderNavItem>
         <HeaderNavItem>
-          <HeaderLink to="/pod">
-            Picture<i className="far fa-image"></i>
-          </HeaderLink>
+          <NavLink to="/pod">
+            <span>Picture</span>
+            <i className="far fa-image"></i>
+          </NavLink>
         </HeaderNavItem>
       </HeaderNav>
     </HeaderNavContainer>

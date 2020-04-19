@@ -1,20 +1,27 @@
-import React from "react";
+import React from 'react';
 
 import {
   FooterContainer,
   FooterNav,
   FooterNavItem,
-  FooterLink
-} from "./footer.styled";
+  FooterLink,
+} from './footer.styled';
+import { NavLink } from '../nav-link';
 
 const Footer = () => (
   <FooterContainer>
     <FooterNav>
-      <FooterNavItem><FooterLink to="/">Home</FooterLink></FooterNavItem>
+      <FooterNavItem>
+        <NavLink to="/">Home</NavLink>
+      </FooterNavItem>
       |
-      <FooterNavItem><FooterLink to="/asteroids">Asteroids</FooterLink></FooterNavItem>
+      <FooterNavItem>
+        <NavLink to="/asteroids">Asteroids</NavLink>
+      </FooterNavItem>
       |
-      <FooterNavItem><FooterLink to="/pod">POD</FooterLink></FooterNavItem>
+      <FooterNavItem>
+        <NavLink to="/pod">POD</NavLink>
+      </FooterNavItem>
     </FooterNav>
   </FooterContainer>
 );
