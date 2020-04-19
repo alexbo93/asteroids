@@ -3,7 +3,7 @@
   "name": "Bezzy Test for retrieving Asteriods information",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "assets/favicon.png",
       "sizes": "32x32",
       "type": "image/png"
     }

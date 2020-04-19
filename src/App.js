@@ -34,9 +34,7 @@ function App() {
           <Route path="/asteroids">
             <Asteroids />
           </Route>
-          <Route path="/asteroid/:id">
-            <Asteroid />
-          </Route>
+          <Route path="/asteroid/:id" component={Asteroid} />
           <Route path="/pod">
             <Pod />
           </Route>

@@ -5,3 +5,10 @@ export const MainContainer = styled.div`
   padding: 0 30px;
   margin-bottom: 50px;
 `;
+
+export const CustomHr = styled.hr`
+  width: 20%;
+  margin: 30px auto;
+  text-align: center;
+  border: 1px solid #333;
+`;

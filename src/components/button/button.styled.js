@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const MainButtonLink = styled(Link)`
   text-decoration: none;
@@ -8,6 +8,8 @@ export const MainButtonLink = styled(Link)`
   color: #fff;
   border-radius: 5px;
   padding: 10px 30px;
+  display: inline-block;
+  margin-top: 20px;
 
   &:hover {
     background-color: #106964;
