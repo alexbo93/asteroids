@@ -9,12 +9,23 @@ import {
 import { LUNAR_DISTANCE } from '../../../constants';
 import { CustomSelect } from '../../../components/input';
 
-const Filters = () => {
+const Filters = ({ onFilterChange }) => {
+  const onHandleChange = (event, name) => {
+    const value =
+      event.target.checked || event.target.checked === false
+        ? event.target.checked
+        : event.target.value;
+    onFilterChange(name, value);
+  };
+
   return (
     <FiltersContainer>
       <FiltersListContainer>
         <FilterItemLeft>
-          <CustomSelect id="filter-distance">
+          <CustomSelect
+            id="filter-distance"
+            onChange={(event) => onHandleChange(event, 'miss_distance')}
+          >
             <option value="">Filter by Distance</option>
             <option value={LUNAR_DISTANCE}>{'<= Lunar Distance'}</option>
             <option value={LUNAR_DISTANCE * 5}>{'<= 5 Lunar Distance'}</option>
@@ -24,7 +35,10 @@ const Filters = () => {
           </CustomSelect>
         </FilterItemLeft>
         <FilterItemRight>
-          <CustomSelect id="filter-velocity">
+          <CustomSelect
+            id="filter-velocity"
+            onChange={(event) => onHandleChange(event, 'velocity')}
+          >
             <option value="">Filter by Velocity</option>
             <option value={10}>{'<= 10 km/s'}</option>
             <option value={20}>{'<= 20 km/s'}</option>
@@ -32,12 +46,12 @@ const Filters = () => {
           </CustomSelect>
         </FilterItemRight>
         <div>
-          <label for="filter-hazardous">Show Hazardous</label>
+          <label htmlFor="filter-hazardous">Show Hazardous</label>
           <input
             type="checkbox"
             id="filter-hazardous"
             name="filter-hazardous"
-            value="Bike"
+            onChange={(event) => onHandleChange(event, 'is_hazardous')}
           />
         </div>
       </FiltersListContainer>

@@ -25,7 +25,7 @@ const AsteroidsListItem = ({ asteroid }) => (
     <AsteroidVariableInfoContainer>
       <span>
         {asteroid.is_hazardous ? (
-          <i class="fas fa-exclamation-triangle"></i>
+          <i className="fas fa-exclamation-triangle"></i>
         ) : (
           '-'
         )}
