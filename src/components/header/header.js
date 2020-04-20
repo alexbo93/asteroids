@@ -10,7 +10,7 @@ import {
 import { NavLink } from '../nav-link';
 
 const Header = () => (
-  <HeaderContainer>
+  <HeaderContainer data-testid="header-container">
     <HeaderLogoContainer>
       <img
         src="/assets/asteroids_200x200.png"

@@ -22,7 +22,7 @@ describe('Footer Component', () => {
   });
 
   it('Should point to Home, List and Picture of the day section with the links', () => {
-    const { getByTestId, container } = render(
+    const { container } = render(
       <ConnectedComponent store={store}>
         <Footer />
       </ConnectedComponent>
