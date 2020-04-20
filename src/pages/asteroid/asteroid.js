@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { CustomHr } from '../../components/container';
+import { CustomHr, InfoContainer } from '../../components/container';
 import { selectAsteroid } from '../../features/asteroids';
 import {
   AsteroidDetailsContainer,
@@ -22,11 +22,11 @@ const Asteroid = ({ match }) => {
   );
 
   const getAdditionalInformation = (asteroid) => (
-    <AsteroidFurtherInformationContainer>
+    <InfoContainer>
       Want further information? Please visit
       <br />
       <a href={asteroid.additional_info}>{asteroid.additional_info}</a>
-    </AsteroidFurtherInformationContainer>
+    </InfoContainer>
   );
 
   const getAsteroidData = (asteroid) => (
