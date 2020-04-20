@@ -2,7 +2,7 @@ import { all, call, put, takeLatest, fork } from 'redux-saga/effects';
 import { GET_ASTEROIDS, setAsteroidsSuccess } from './asteroids-actions';
 import moment from 'moment';
 
-import { callApi } from '../../utils/api-utils';
+import callApi from '../../utils/api-utils';
 import Asteroids from '../../models/asteroids-builder';
 import Asteroid from '../../models/asteroid-builder';
 

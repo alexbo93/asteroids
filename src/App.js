@@ -19,7 +19,8 @@ import './App.css';
 import { getAsteroids } from './features/asteroids';
 import { useDispatch } from 'react-redux';
 
-function App() {
+const App = () => {
+  console.log('DEFINE COMPONENT PROPTYPES!!');
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -50,6 +51,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

@@ -1,7 +1,7 @@
 import { all, call, put, takeLatest, fork } from 'redux-saga/effects';
 import { GET_POD, setPodSuccess } from './pod-actions';
 
-import { callApi } from '../../utils/api-utils';
+import callApi from '../../utils/api-utils';
 // import POD from '../../models/pod-builder';
 
 console.log('GO WITH .ENV VARIABLES');

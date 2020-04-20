@@ -42,5 +42,8 @@
       "last 1 safari version",
       "ie 11"
     ]
+  },
+  "devDependencies": {
+    "redux-mock-store": "^1.5.4"
   }
 }

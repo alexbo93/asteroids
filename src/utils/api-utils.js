@@ -1,3 +1,5 @@
-export const callApi = async path => {
+const callApi = async (path) => {
   return await (await fetch(path)).json();
-}
+};
+
+export default callApi;
