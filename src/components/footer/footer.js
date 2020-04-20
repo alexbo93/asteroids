@@ -4,7 +4,7 @@ import { FooterContainer, FooterNav, FooterNavItem } from './footer.styled';
 import { NavLink } from '../nav-link';
 
 const Footer = () => (
-  <FooterContainer>
+  <FooterContainer data-testid="footer-container">
     <FooterNav>
       <FooterNavItem>
         <NavLink to="/">Home</NavLink>
