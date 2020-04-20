@@ -16,7 +16,6 @@ function* getPodSaga() {
     const apiString = `${apiURL}${apiPath}${apiKey}`;
     const data = yield call(callApi, apiString);
 
-    // const pod = pod.build(data, Asteroid);
     yield put(setPodSuccess(data));
   } catch (error) {
     console.error(error);
