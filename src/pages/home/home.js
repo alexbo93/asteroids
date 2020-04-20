@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HomeContainer, HomeContent } from './home.styled';
+import { HomeContainer, HomeContent, HomeButtonLink } from './home.styled';
 import { MainButtonLink } from '../../components/button';
 
 const Home = () => (
@@ -17,8 +17,12 @@ const Home = () => (
           This app generates a list of all the NEOs grouped by days. By default
           today's NEOs will be displayed, but results from yesterday and
           tomorrow can be retrieved.
+          <br />
+          <br />
+          You also have the chance to see the fabulous NASA's Picture of the day
         </p>
-        <MainButtonLink to="/asteroids">Go to the List</MainButtonLink>
+        <HomeButtonLink to="/asteroids">Go to the List</HomeButtonLink>
+        <HomeButtonLink to="/pod">Go to Picture</HomeButtonLink>
       </HomeContent>
     </HomeContainer>
   </React.Fragment>

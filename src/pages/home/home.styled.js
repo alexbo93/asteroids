@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { MainButtonLink } from '../../components/button';
 
 export const HomeContainer = styled.div`
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -25,5 +26,13 @@ export const HomeContent = styled.div`
     a {
       margin-top: 0;
     }
+  }
+`;
+
+export const HomeButtonLink = styled(MainButtonLink)`
+  display: inline-block;
+
+  &:first-of-type {
+    margin-right: 30px;
   }
 `;
