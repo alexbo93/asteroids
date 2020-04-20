@@ -10,7 +10,7 @@ console.log('GO WITH .ENV VARIABLES');
 console.log('PREPARE PROD ENVIRONMENT VARS');
 
 const apiURL = 'https://api.nasa.gov';
-const startDate = moment().format('YYYY-MM-DD');
+const startDate = moment().subtract(7, 'days').format('YYYY-MM-DD');
 const endDate = moment().format('YYYY-MM-DD');
 let dateRange = 'start_date=#start_date#&end_date=#end_date#';
 const apiKey = '&api_key=0D8NTQqesnNtKhURI8hLFTlMrWTwsDhRDd8cpf0n';

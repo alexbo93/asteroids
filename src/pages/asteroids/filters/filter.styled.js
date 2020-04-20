@@ -49,3 +49,9 @@ export const FilterItemLeft = styled(FilterItem)`
     float: left;
   }
 `;
+
+export const HazardousInfoLabel = styled.span`
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+`;

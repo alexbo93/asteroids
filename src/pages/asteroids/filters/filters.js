@@ -5,6 +5,7 @@ import {
   FiltersListContainer,
   FilterItemRight,
   FilterItemLeft,
+  HazardousInfoLabel,
 } from './filter.styled';
 import { LUNAR_DISTANCE } from '../../../constants';
 import { CustomSelect } from '../../../components/input';
@@ -32,7 +33,6 @@ const Filters = ({ onFilterChange }) => {
             <option value={LUNAR_DISTANCE * 10}>
               {'<= 10 Lunar Distance'}
             </option>
-            <option value={Number.MAX_VALUE}>{'> 10 Lunar distance'}</option>
           </CustomSelect>
         </FilterItemLeft>
         <FilterItemRight>
@@ -41,9 +41,9 @@ const Filters = ({ onFilterChange }) => {
             onChange={(event) => onHandleChange(event, 'velocity')}
           >
             <option value="">Filter by Velocity</option>
+            <option value={5}>{'<= 5 km/s'}</option>
             <option value={10}>{'<= 10 km/s'}</option>
             <option value={20}>{'<= 20 km/s'}</option>
-            <option value={Number.MAX_VALUE}>{'> 20 km/s'}</option>
           </CustomSelect>
         </FilterItemRight>
         <div>
@@ -54,6 +54,9 @@ const Filters = ({ onFilterChange }) => {
             name="filter-hazardous"
             onChange={(event) => onHandleChange(event, 'is_hazardous')}
           />
+          <HazardousInfoLabel>
+            By Default, non-hazardous NEOs will be shown
+          </HazardousInfoLabel>
         </div>
       </FiltersListContainer>
     </FiltersContainer>
