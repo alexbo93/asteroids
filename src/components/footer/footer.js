@@ -1,11 +1,6 @@
 import React from 'react';
 
-import {
-  FooterContainer,
-  FooterNav,
-  FooterNavItem,
-  FooterLink,
-} from './footer.styled';
+import { FooterContainer, FooterNav, FooterNavItem } from './footer.styled';
 import { NavLink } from '../nav-link';
 
 const Footer = () => (

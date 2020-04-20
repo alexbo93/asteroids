@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { HomeContainer, HomeContent, HomeButtonLink } from './home.styled';
-import { MainButtonLink } from '../../components/button';
 
 const Home = () => (
   <React.Fragment>
