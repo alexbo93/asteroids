@@ -7,7 +7,7 @@ import {
 } from './asteroids-list-labels.styled.js';
 
 const AsteroidsListLabels = ({ onLabelSelected }) => (
-  <AsteroidsListLabelsContainer>
+  <AsteroidsListLabelsContainer data-testid="asteroids-list__labels-container">
     <AsteroidName
       data-testid="label-name"
       onClick={() => onLabelSelected('name')}

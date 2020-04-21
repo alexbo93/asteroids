@@ -14,16 +14,16 @@ const AsteroidsListItem = ({ asteroid }) => (
   <AsteroidListItemContainer data-testid="asteroid-list__item-container">
     <AsteroidIconContainer>
       <i className="fas fa-meteor fa-lg"></i>
-      <span>{asteroid.name}</span>
+      <span data-testid="asteroid-name">{asteroid.name}</span>
     </AsteroidIconContainer>
-    <AsteroidVariableInfoContainer>
+    <AsteroidVariableInfoContainer data-testid="asteroid-distance">
       <span>{getRounded(asteroid.miss_distance)}</span>
     </AsteroidVariableInfoContainer>
-    <AsteroidVariableInfoContainer>
+    <AsteroidVariableInfoContainer data-testid="asteroid-velocity">
       <span>{getRounded(asteroid.velocity)}</span>
     </AsteroidVariableInfoContainer>
     <AsteroidVariableInfoContainer>
-      <span>
+      <span data-testid="asteroid-hazardous">
         {asteroid.is_hazardous ? (
           <i className="fas fa-exclamation-triangle"></i>
         ) : (
@@ -32,7 +32,7 @@ const AsteroidsListItem = ({ asteroid }) => (
       </span>
     </AsteroidVariableInfoContainer>
     <AsteroidDetailIconContainer>
-      <Link to={`/asteroid/${asteroid.id}`}>
+      <Link data-testid="asteroid-link" to={`/asteroid/${asteroid.id}`}>
         <i className="fas fa-arrow-alt-circle-right"></i>
       </Link>
     </AsteroidDetailIconContainer>
