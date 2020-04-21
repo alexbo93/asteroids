@@ -10,7 +10,7 @@ export const mockAsteroid = {
         },
         id: '2088959',
         neo_reference_id: '2088959',
-        name: '88959 (2001 TZ44)',
+        name: 'Asteroid1',
         nasa_jpl_url: 'http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2088959',
         absolute_magnitude_h: 17.3,
         estimated_diameter: {
@@ -60,7 +60,7 @@ export const mockAsteroid = {
         },
         id: '3587874',
         neo_reference_id: '3587874',
-        name: '(2011 WC)',
+        name: 'Basteroid2',
         nasa_jpl_url: 'http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3587874',
         absolute_magnitude_h: 22.8,
         estimated_diameter: {
@@ -114,7 +114,7 @@ export const mockFormattedAsteroids = [
     id: '2088959',
     is_hazardous: false,
     miss_distance: '52098446.874943469',
-    name: '88959 (2001 TZ44)',
+    name: 'Asteroid1',
     orbiting_body: 'Earth',
     velocity: '28.7110061262',
   },
@@ -124,7 +124,30 @@ export const mockFormattedAsteroids = [
     id: '3587874',
     is_hazardous: false,
     miss_distance: '31103932.602580121',
-    name: '(2011 WC)',
+    name: 'Basteroid2',
+    orbiting_body: 'Earth',
+    velocity: '5.2082864404',
+  },
+];
+
+export const mockFormattedCustomDistanceAsteroids = [
+  {
+    additional_info: 'http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2088959',
+    closer_on: '2020-Apr-13 22:11',
+    id: '2088959',
+    is_hazardous: false,
+    miss_distance: '52098446.874943469',
+    name: 'Asteroid1',
+    orbiting_body: 'Earth',
+    velocity: '28.7110061262',
+  },
+  {
+    additional_info: 'http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3587874',
+    closer_on: '2020-Apr-13 14:42',
+    id: '3587874',
+    is_hazardous: false,
+    miss_distance: '103932.602580121',
+    name: 'Basteroid2',
     orbiting_body: 'Earth',
     velocity: '5.2082864404',
   },

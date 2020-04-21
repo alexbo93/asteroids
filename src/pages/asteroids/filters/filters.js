@@ -25,6 +25,7 @@ const Filters = ({ onFilterChange }) => {
         <FilterItemLeft>
           <CustomSelect
             id="filter-distance"
+            data-testid="filter-distance"
             onChange={(event) => onHandleChange(event, 'miss_distance')}
           >
             <option value="">Filter by Distance</option>
@@ -38,6 +39,7 @@ const Filters = ({ onFilterChange }) => {
         <FilterItemRight>
           <CustomSelect
             id="filter-velocity"
+            data-testid="filter-velocity"
             onChange={(event) => onHandleChange(event, 'velocity')}
           >
             <option value="">Filter by Velocity</option>
@@ -49,6 +51,7 @@ const Filters = ({ onFilterChange }) => {
         <div>
           <label htmlFor="filter-hazardous">Show Hazardous</label>
           <input
+            data-testid="filter-hazardous"
             type="checkbox"
             id="filter-hazardous"
             name="filter-hazardous"

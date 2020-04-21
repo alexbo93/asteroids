@@ -12,7 +12,7 @@ const AsteroidsList = ({ asteroids, onLabelSelected }) => {
     ));
 
   return (
-    <AsteroidsListContainer>
+    <AsteroidsListContainer data-testid="asteroids-list__list-container">
       <AsteroidListLabels onLabelSelected={onLabelSelected} />
       {asteroids && asteroids.length ? getList() : 'There are no asteroids'}
     </AsteroidsListContainer>

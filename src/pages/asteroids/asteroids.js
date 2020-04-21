@@ -16,9 +16,9 @@ const Asteroids = () => {
   } = useAsteroids();
 
   return (
-    <MainContainer>
+    <MainContainer data-testid="asteroids-list__container">
       <h1>Asteroids</h1>
-      <AsteroidsFilterContainer>
+      <AsteroidsFilterContainer data-testid="asteroids-list__filters-container">
         <Filters onFilterChange={onFilterChange} />
       </AsteroidsFilterContainer>
       <AsteroidsList

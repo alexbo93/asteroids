@@ -49,7 +49,15 @@ const useAsteroids = () => {
     const ascOrderFn = (a, b) =>
       parseFloat(a[order.param]) > parseFloat(b[order.param]) ? 1 : -1;
 
-    const sortFn = order.desc ? descOrderFn : ascOrderFn;
+    const descAlphaOrderFn = (a, b) =>
+      a[order.param] > b[order.param] ? -1 : 1;
+    const ascAlphaOrderFn = (a, b) =>
+      a[order.param] > b[order.param] ? 1 : -1;
+
+    let sortFn = order.desc ? descOrderFn : ascOrderFn;
+    if (order.param === 'name')
+      sortFn = order.desc ? descAlphaOrderFn : ascAlphaOrderFn;
+
     return ordered.sort(sortFn);
   };
 

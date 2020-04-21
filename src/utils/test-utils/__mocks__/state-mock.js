@@ -1,7 +1,15 @@
 import { mockPod } from './pod-mock';
-import { mockFormattedAsteroids } from './asteroid-mock';
+import {
+  mockFormattedAsteroids,
+  mockFormattedCustomDistanceAsteroids,
+} from './asteroid-mock';
 
 export const mockedState = {
   asteroids: mockFormattedAsteroids,
+  pod: mockPod,
+};
+
+export const mockedDistanceCustomState = {
+  asteroids: mockFormattedCustomDistanceAsteroids,
   pod: mockPod,
 };

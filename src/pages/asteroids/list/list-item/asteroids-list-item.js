@@ -11,7 +11,7 @@ import {
 } from './asteroids-list-item.styled';
 
 const AsteroidsListItem = ({ asteroid }) => (
-  <AsteroidListItemContainer>
+  <AsteroidListItemContainer data-testid="asteroid-list__item-container">
     <AsteroidIconContainer>
       <i className="fas fa-meteor fa-lg"></i>
       <span>{asteroid.name}</span>
