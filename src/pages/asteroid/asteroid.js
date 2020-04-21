@@ -21,7 +21,7 @@ const Asteroid = ({ match }) => {
   );
 
   const getAdditionalInformation = (asteroid) => (
-    <InfoContainer>
+    <InfoContainer data-testid="asteroid-additional">
       Want further information? Please visit
       <br />
       <a href={asteroid.additional_info}>{asteroid.additional_info}</a>
@@ -34,19 +34,19 @@ const Asteroid = ({ match }) => {
         <h3>Asteroid: {asteroid && asteroid.name}</h3>
         <CustomHr />
       </AsteroidInformationContainer>
-      <AsteroidInformationLine>
+      <AsteroidInformationLine data-testid="asteroid-distance">
         <AsteroidInformationLabel>Distance to Earth</AsteroidInformationLabel>
         {asteroid && getRounded(asteroid.miss_distance)} Km
       </AsteroidInformationLine>
-      <AsteroidInformationLine>
+      <AsteroidInformationLine data-testid="asteroid-velocity">
         <AsteroidInformationLabel>Velocity</AsteroidInformationLabel>
         {asteroid && getRounded(asteroid.velocity)} Km/s
       </AsteroidInformationLine>
-      <AsteroidInformationLine>
+      <AsteroidInformationLine data-testid="asteroid-orbit">
         <AsteroidInformationLabel>Orbiting...</AsteroidInformationLabel>
         {asteroid && asteroid.orbiting_body}
       </AsteroidInformationLine>
-      <AsteroidInformationLine>
+      <AsteroidInformationLine data-testid="asteroid-date">
         <AsteroidInformationLabel>Closest Date & Time</AsteroidInformationLabel>
         {asteroid && asteroid.closer_on} GMT
       </AsteroidInformationLine>
@@ -61,14 +61,16 @@ const Asteroid = ({ match }) => {
       <BackLinkContainer>
         <MainButtonLink to="/asteroids">Go Back to List</MainButtonLink>
       </BackLinkContainer>
-      <AsteroidDetailsContainer>
+      <AsteroidDetailsContainer data-testid="asteroid-container">
         <AsteroidDetailImage>
           <i className="fas fa-meteor fa-10x"></i>
         </AsteroidDetailImage>
         {asteroid ? (
           getAsteroidData(asteroid)
         ) : (
-          <AsteroidNotFound>No Asteroid found with this id</AsteroidNotFound>
+          <AsteroidNotFound data-testid="asteroid-not-found">
+            No Asteroid found with this id
+          </AsteroidNotFound>
         )}
       </AsteroidDetailsContainer>
     </React.Fragment>
