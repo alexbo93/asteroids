@@ -3,7 +3,6 @@ import { GET_POD, setPodSuccess } from './pod-actions';
 
 import callApi from '../../utils/api-utils';
 import { API_INFO } from '../../constants';
-// import POD from '../../models/pod-builder';
 
 console.log('GO WITH .ENV VARIABLES');
 console.log('PREPARE PROD ENVIRONMENT VARS');

@@ -7,11 +7,14 @@ import logger from 'redux-logger';
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const sagaMiddleware = createSagaMiddleware();
-console.log('IMPROVE LOGGER AND TEST CONFIGURE STORE');
+
+const middlewares = [sagaMiddleware];
+if (process.env.NODE_ENV === 'development') middlewares.push(logger);
+
 const configureStore = (initialState = '') => {
   let store = createStore(
     rootReducer,
-    composeEnhancer(applyMiddleware(sagaMiddleware, logger))
+    composeEnhancer(applyMiddleware(...middlewares))
   );
   if (initialState !== '') {
     store = createStore(
