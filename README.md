@@ -1,21 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NASA Near Earth Object Approaches Portal
 
-## Available Scripts
+## Description
+This is the portal that will bring NEOs 'closer' the the users.
 
-In the project directory, you can run:
+By consuming official NASA [Official Open Apis](https://api.nasa.gov/), this site provides information related to NEOs whose orbit will approach the earth in the coming 7 days. 
 
-### `npm start`
+As they orbit the Sun, NEOs can occasionally approach close to Earth. Note that a “close” passage astronomically can be very far away in human terms: millions or even tens of millions of kilometers. CNEOS software detects predicted Earth close approaches for all known NEOs, in both the past and the future.
 
-Runs the app in the development mode.<br />
+Check it out [here](https://bezzy-asteroids.herokuapp.com/)
+
+## Astronomy Picture of the Day
+Not only the portal will display information about upcoming approaches, but will also delight the user with the Astronomy Picture of the Day, also provided by the NASA.
+
+Access [here](https://bezzy-asteroids.herokuapp.com/pod) to test it yourself!
+
+## Build de portal in your machine
+
+Once the repo has been cloned locally, run:
+
+### `npm install`
+
+To properly run the app, then run:
+
+### `npm run startdev`
+
+This will run the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+## Check that app is properly tested
+
+To do so run:
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+## Generate a production artifact
 
 ### `npm run build`
 
@@ -25,44 +49,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### To check if the bundle is properly build...
 
-### `npm run eject`
+Run this right after creating the bundle
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `npm run start`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
