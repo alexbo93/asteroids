@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   FiltersContainer,
-  FiltersListContainer,
   FilterItemRight,
   FilterItemLeft,
   HazardousInfoLabel,
@@ -20,50 +20,50 @@ const Filters = ({ onFilterChange }) => {
   };
 
   return (
-    <FiltersContainer>
-      <FiltersListContainer>
-        <FilterItemLeft>
-          <CustomSelect
-            id="filter-distance"
-            data-testid="filter-distance"
-            onChange={(event) => onHandleChange(event, 'miss_distance')}
-          >
-            <option value="">Filter by Distance</option>
-            <option value={LUNAR_DISTANCE}>{'<= Lunar Distance'}</option>
-            <option value={LUNAR_DISTANCE * 5}>{'<= 5 Lunar Distance'}</option>
-            <option value={LUNAR_DISTANCE * 10}>
-              {'<= 10 Lunar Distance'}
-            </option>
-          </CustomSelect>
-        </FilterItemLeft>
-        <FilterItemRight>
-          <CustomSelect
-            id="filter-velocity"
-            data-testid="filter-velocity"
-            onChange={(event) => onHandleChange(event, 'velocity')}
-          >
-            <option value="">Filter by Velocity</option>
-            <option value={5}>{'<= 5 km/s'}</option>
-            <option value={10}>{'<= 10 km/s'}</option>
-            <option value={20}>{'<= 20 km/s'}</option>
-          </CustomSelect>
-        </FilterItemRight>
-        <div>
-          <label htmlFor="filter-hazardous">Show Hazardous</label>
-          <input
-            data-testid="filter-hazardous"
-            type="checkbox"
-            id="filter-hazardous"
-            name="filter-hazardous"
-            onChange={(event) => onHandleChange(event, 'is_hazardous')}
-          />
-          <HazardousInfoLabel>
-            By Default, non-hazardous NEOs will be shown
-          </HazardousInfoLabel>
-        </div>
-      </FiltersListContainer>
+    <FiltersContainer data-testid="filters-list__container">
+      <FilterItemLeft>
+        <CustomSelect
+          id="filter-distance"
+          data-testid="filter-distance"
+          onChange={(event) => onHandleChange(event, 'miss_distance')}
+        >
+          <option value="">Filter by Distance</option>
+          <option value={LUNAR_DISTANCE}>{'<= Lunar Distance'}</option>
+          <option value={LUNAR_DISTANCE * 5}>{'<= 5 Lunar Distance'}</option>
+          <option value={LUNAR_DISTANCE * 10}>{'<= 10 Lunar Distance'}</option>
+        </CustomSelect>
+      </FilterItemLeft>
+      <FilterItemRight>
+        <CustomSelect
+          id="filter-velocity"
+          data-testid="filter-velocity"
+          onChange={(event) => onHandleChange(event, 'velocity')}
+        >
+          <option value="">Filter by Velocity</option>
+          <option value={5}>{'<= 5 km/s'}</option>
+          <option value={10}>{'<= 10 km/s'}</option>
+          <option value={20}>{'<= 20 km/s'}</option>
+        </CustomSelect>
+      </FilterItemRight>
+      <div>
+        <label htmlFor="filter-hazardous">Show Hazardous</label>
+        <input
+          data-testid="filter-hazardous"
+          type="checkbox"
+          id="filter-hazardous"
+          name="filter-hazardous"
+          onChange={(event) => onHandleChange(event, 'is_hazardous')}
+        />
+        <HazardousInfoLabel>
+          By Default, non-hazardous NEOs will be shown
+        </HazardousInfoLabel>
+      </div>
     </FiltersContainer>
   );
+};
+
+Filters.propTypes = {
+  onHandleChange: PropTypes.func.isRequired,
 };
 
 export default Filters;

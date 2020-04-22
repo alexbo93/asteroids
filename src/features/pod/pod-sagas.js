@@ -4,9 +4,6 @@ import { GET_POD, setPodSuccess } from './pod-actions';
 import callApi from '../../utils/api-utils';
 import { API_INFO } from '../../constants';
 
-console.log('GO WITH .ENV VARIABLES');
-console.log('PREPARE PROD ENVIRONMENT VARS');
-
 const apiURL = API_INFO.URL;
 const apiPath = API_INFO.POD_PATH;
 const apiKey = `?api_key=${API_INFO.API_KEY}`;

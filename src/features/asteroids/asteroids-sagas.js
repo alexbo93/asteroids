@@ -7,9 +7,6 @@ import Asteroids from '../../models/asteroids-builder';
 import Asteroid from '../../models/asteroid-builder';
 import { API_INFO } from '../../constants';
 
-console.log('GO WITH .ENV VARIABLES');
-console.log('PREPARE PROD ENVIRONMENT VARS');
-
 const apiURL = API_INFO.URL;
 const startDate = moment().subtract(7, 'days').format('YYYY-MM-DD');
 const endDate = moment().format('YYYY-MM-DD');

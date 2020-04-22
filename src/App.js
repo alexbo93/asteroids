@@ -20,7 +20,6 @@ import { getAsteroids } from './features/asteroids';
 import { useDispatch } from 'react-redux';
 
 const App = () => {
-  console.log('DEFINE COMPONENT PROPTYPES!!');
   const dispatch = useDispatch();
 
   useEffect(() => {

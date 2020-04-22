@@ -7,15 +7,11 @@ export const FiltersContainer = styled.div`
   width: 100%;
   margin-bottom: 30px;
   border-radius: 5px;
+  display: inline-block;
 
   @media (max-width: 600px) {
     padding: 15px;
   }
-`;
-
-export const FiltersListContainer = styled.div`
-  width: 100%;
-  display: inline-block;
 `;
 
 export const FilterItem = styled.div`
