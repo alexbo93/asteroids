@@ -17,16 +17,16 @@ const Pod = () => {
   const getMedia = () => {
     if (pod.media_type === 'video') {
       return (
-        <InfoContainer>
+        <InfoContainer data-testid="apod-video-info__container">
           It seems there is an amazing video today. Please watch it on <br />
           <a href={pod.url}>{pod.url}</a>
         </InfoContainer>
       );
     }
-    return <PodImage src={pod.url} />;
+    return <PodImage data-testid="apod-image__container" src={pod.url} />;
   };
   return (
-    <PodContainer>
+    <PodContainer data-testid="apod-container">
       {pod && (
         <React.Fragment>
           <h1>{pod.title}</h1>
