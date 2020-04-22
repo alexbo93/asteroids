@@ -9,6 +9,7 @@ import {
   AsteroidDetailIconContainer,
   AsteroidVariableInfoContainer,
 } from './asteroids-list-item.styled';
+import { AsteroidType } from '../../../../utils/proptypes';
 
 const AsteroidsListItem = ({ asteroid }) => (
   <AsteroidListItemContainer data-testid="asteroid-list__item-container">
@@ -38,5 +39,9 @@ const AsteroidsListItem = ({ asteroid }) => (
     </AsteroidDetailIconContainer>
   </AsteroidListItemContainer>
 );
+
+AsteroidsListItem.propTypes = {
+  asteroid: AsteroidType.isRequired,
+};
 
 export default AsteroidsListItem;

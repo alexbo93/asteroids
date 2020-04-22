@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   AsteroidsListLabelsContainer,
@@ -29,5 +30,9 @@ const AsteroidsListLabels = ({ onLabelSelected }) => (
     <AsteroidVariableLabel>Hazardous?</AsteroidVariableLabel>
   </AsteroidsListLabelsContainer>
 );
+
+AsteroidsListLabels.propTypes = {
+  onLabelSelected: PropTypes.func.isRequired,
+};
 
 export default AsteroidsListLabels;

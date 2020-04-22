@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
 import { CustomHr, InfoContainer } from '../../components/container';
@@ -75,6 +76,14 @@ const Asteroid = ({ match }) => {
       </AsteroidDetailsContainer>
     </React.Fragment>
   );
+};
+
+Asteroid.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string,
+    }),
+  }).isRequired,
 };
 
 export default Asteroid;
