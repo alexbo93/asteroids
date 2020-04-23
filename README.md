@@ -7,7 +7,7 @@ By consuming official NASA [Official Open Apis](https://api.nasa.gov/), this sit
 
 As they orbit the Sun, NEOs can occasionally approach close to Earth. Note that a “close” passage astronomically can be very far away in human terms: millions or even tens of millions of kilometers. CNEOS software detects predicted Earth close approaches for all known NEOs, in both the past and the future.
 
-Check it out [here](https://bezzy-asteroids.herokuapp.com/)
+### Check it out [here](https://bezzy-asteroids.herokuapp.com/)
 
 ## Astronomy Picture of the Day
 Not only the portal will display information about upcoming approaches, but will also delight the user with the Astronomy Picture of the Day, also provided by the NASA.
